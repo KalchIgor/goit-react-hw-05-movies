@@ -15,6 +15,7 @@ nav {
     color: #fff;
     border: 1px solid #0d253f;
     background-color: #0d253f;
+    border-radius: 5px;
 }
 
 .link:first-child {
@@ -22,6 +23,6 @@ nav {
 }
 
 .link.active {
-    background-color: #fff;
-    color: #0d253f;
+    background-color: rgb(226, 60, 177);
+    color: black;
 }

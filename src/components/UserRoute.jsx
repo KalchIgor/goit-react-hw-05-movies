@@ -7,6 +7,7 @@ import  Footer  from "./Footer/Footer"
 
 export default function UserRoute() {
   return (
+  <>
     <Suspense fallback={<Loader/>}>
         <Routes>
         <Route path="/" element={<SharedLayout />}>
@@ -15,10 +16,10 @@ export default function UserRoute() {
         <Route path="*" element={<NotFound />}></Route>
         </Route>
       </Routes>
-        <Footer />
+       
     </Suspense>
-    
-  
+     <Footer />
+  </>
    
     )
 }
