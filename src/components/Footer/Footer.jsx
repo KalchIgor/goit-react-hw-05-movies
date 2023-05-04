@@ -1,4 +1,4 @@
-function Copyright() {
+export default function Footer() {
     return (
         <div color="textSecondary" align="center">
             © {" "}
@@ -11,9 +11,8 @@ function Copyright() {
                 rel="noopener noreferrer"
                 className="link"
             >
-             {" "} by Igor Kalchin
+             {" "} Igor Kalchin
             </a>
         </div>
     );
 }
-export { Copyright };
