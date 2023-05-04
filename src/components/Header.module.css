@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #fff;
+    border: 1px solid #0d253f;
+    background-color: #0d253f;
+}
+
+.link:first-child {
+    margin-right: 45px;
+}
+
+.link.active {
+    background-color: #fff;
+    color: #0d253f;
+}
