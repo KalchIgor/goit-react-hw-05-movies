@@ -24,6 +24,8 @@
     width: 100%;
     max-width: 240px;
     margin: 0.5em;
+    height: 435px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, .5);
 }
 
 .img {
