@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from 'react';
-import Home from "pages/Home/Home";
-import Movies from "pages/Movies/Movies";
-import MovieDetails from "pages/MovieDetails/MovieDetails";
-import  Cast from "pages/Cast/Cast";
 import { Loader }  from "./Loader/Loader";
-import SharedLayout from "pages/SharedLayout/SharedLayout";
-import NotFound from "pages/NotFound/NotFound";
-import Footer from "./Footer/Footer"
+import Home from "pages/Home";
+import Movies from "pages/Movies";
+import MovieDetails from "pages/MovieDetails";
+import  Cast from "pages/Cast";
+import SharedLayout from "pages/SharedLayout";
+import NotFound from "pages/NotFound";
+import Footer from "./Footer";
+import Reviews from "pages/Reviews";
 
 
 export default function UserRoute() {
@@ -19,13 +20,12 @@ export default function UserRoute() {
         <Route path="/movies" element={<Movies />}></Route>
           <Route path="/movies/:movieId" element={<MovieDetails />}>
             <Route path="cast" element={<Cast />}></Route>
-            
+            <Route path="reviews" element={<Reviews />}></Route>
           </Route>
           <Route path="*" element={<NotFound />}></Route>
-       
         </Route>     
       </Routes>
-      <Footer />  
+       <Footer />  
       </Suspense>
   );
 };

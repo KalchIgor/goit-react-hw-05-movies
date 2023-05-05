@@ -1,11 +1,11 @@
 nav {
     display: flex;
-    justify-content: left;
+    justify-content: right;
     align-items: center;
     list-style: none;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 60px;
+    padding-right: 70px;
 
 }
 

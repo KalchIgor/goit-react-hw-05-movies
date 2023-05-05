@@ -1,0 +1,13 @@
+.reviewsInfo {
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #0d253f;
+    padding: 20px;
+}
+
+.reviewsAuthor {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
