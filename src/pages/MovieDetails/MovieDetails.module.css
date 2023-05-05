@@ -1,0 +1,64 @@
+.button {
+    color: #0d253f;
+    border: 1px solid #0d253f;
+    background-color: rgb(237, 26, 145);
+    width: 80px;
+    padding: 4px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, .5);
+}
+
+.movieDetails {
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxImg {
+    margin-right: 10px;
+}
+
+.img {
+    border-radius: 10px;
+}
+
+.boxInfo {
+    padding: 10px;
+}
+
+.boxAddInfo {
+    margin-top: 80px;
+}
+
+.castLink {
+    display: inline-block;
+    text-align: center;
+    margin-right: 60px;
+    font-size: large;
+    width: 100px;
+    border: 1px solid #0d253f;
+    background-color: #0d253f;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, .5);
+}
+
+
+.reviewLink {
+    display: inline-block;
+    text-align: center;
+    font-size: large;
+    width: 100px;
+    border: 1px solid #0d253f;
+    background-color: #0d253f;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, .5);
+}
