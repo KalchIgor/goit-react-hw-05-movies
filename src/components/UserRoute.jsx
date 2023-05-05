@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import React, { Suspense } from 'react';
 import Home from "pages/Home/Home";
 import Movies from "pages/Movies/Movies";
-import { Loader } from "./Loader/Loader";
+import { Loader }  from "./Loader/Loader";
 import SharedLayout from "pages/SharedLayout/SharedLayout";
 import NotFound from "pages/NotFound/NotFound";
 import  Footer  from "./Footer/Footer"
