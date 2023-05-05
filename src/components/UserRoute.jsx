@@ -1,19 +1,31 @@
 import { Route, Routes } from "react-router-dom";
-import React, { Suspense } from 'react';
+import { lazy, Suspense } from "react";
 import { Loader }  from "./Loader/Loader";
-import Home from "pages/Home";
 import Movies from "pages/Movies";
-import MovieDetails from "pages/MovieDetails";
-import  Cast from "pages/Cast";
-import SharedLayout from "pages/SharedLayout";
-import NotFound from "pages/NotFound";
 import Footer from "./Footer";
-import Reviews from "pages/Reviews";
+
+//import Home from "pages/Home";
+const Home = lazy(() => import("pages/Home"));
+
+//import MovieDetails from "pages/MovieDetails";
+const MovieDetails = lazy(() => import("pages/MovieDetails"));
+
+//import Cast from "pages/Cast";
+const Cast = lazy(() => import("pages/Cast"));
+
+//import SharedLayout from "pages/SharedLayout";
+const SharedLayout = lazy(() => import("pages/SharedLayout"));
+
+//import NotFound from "pages/NotFound";
+const NotFound = lazy(() => import("pages/NotFound"));
+
+//import Reviews from "pages/Reviews";
+const Reviews = lazy(() => import("pages/Reviews"));
 
 
 export default function UserRoute() {
   return (
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={<Loader/> }>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />}></Route>
