@@ -38,15 +38,16 @@ export const getMovieDetails = async (movieId) => {
 
 
 export const getMovieCast = async (movieId) => {
-     try {
+  try {
     const query = `movie/${movieId}/credits?api_key=${KEY}`;
     const { data } = await axios.get(query);
-         return data;
-     }
-    catch (error) {
+    return data;
+  }
+  catch (error) {
     return (error);
   }
-};
+}
+
 
 export const getReviews = async (movieId) => {
      try {
