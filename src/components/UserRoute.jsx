@@ -10,10 +10,9 @@ import NotFound from "pages/NotFound/NotFound";
 import Footer from "./Footer/Footer"
 
 
-
 export default function UserRoute() {
   return (
-      <Suspense fallback={<Loader />}>
+        <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />}></Route>
