@@ -25,7 +25,7 @@ const Reviews = lazy(() => import("pages/Reviews"));
 
 export default function UserRoute() {
   return (
-        <Suspense fallback={<Loader/> }>
+    <Suspense fallback={<Loader/> }>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />}></Route>
@@ -37,7 +37,7 @@ export default function UserRoute() {
           <Route path="*" element={<NotFound />}></Route>
         </Route>     
       </Routes>
-       <Footer />  
-      </Suspense>
+      <Footer />  
+    </Suspense>
   );
 };
