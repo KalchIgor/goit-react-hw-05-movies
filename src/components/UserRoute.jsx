@@ -11,29 +11,6 @@ import Footer from "./Footer/Footer"
 
 
 
-/*export default function UserRoute() {
-  return (
-  <>
-    <Suspense fallback={<Loader/>}>
-      <Routes>
-        <Route path="/" element={<SharedLayout />}>
-            <Route index element={<Home />}></Route>
-            <Route path="/movies" element={<Movies />}></Route>
-            <Route path="/movies/:movieId" element={<MovieDetails />}></Route>
-               <Route path="cast" element={<Cast />}></Route>
-           
-        
-        <Route path="*" element={<NotFound />}></Route>
-        </Route>
-      </Routes>
-       
-    </Suspense>
-     <Footer />
-  </>
-   
-    )
-}*/
-
 export default function UserRoute() {
   return (
       <Suspense fallback={<Loader />}>
