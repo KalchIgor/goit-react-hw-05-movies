@@ -13,7 +13,6 @@ export default function MovieDetails() {
   const [error, setError] = useState(null);
 
   const location = useLocation();
- 
   const { movieId } = useParams();
   
   useEffect(() => {
@@ -33,15 +32,9 @@ export default function MovieDetails() {
     movieDetails();
   }, [movieId])
 
-  const isCastDetails = location.pathname.includes("cast");
-  const castLink = isCastDetails ? `/movies/${movieId}` : `/movies/${movieId}/cast`;
-  const isReviewDetails = location.pathname.includes("reviews");
-  const reviewLink = isReviewDetails ? `/movies/${movieId}` : `/movies/${movieId}/reviews`;
-  const from = location.state?.from ?? "/";
-
   return (
     <div className={css.container}>
-      <ButtonBack />
+         <ButtonBack />
       {loading && <Loader />}
       {error && <p>Something went wrong</p>}
       {movie && (
@@ -58,8 +51,8 @@ export default function MovieDetails() {
             <p>{`${movie.genres.map(genre => genre.name).join(' / ')}`}</p>
             <div className={css.boxAddInfo}>
               <h2>Additional information</h2>
-              <Link className={css.castLink} state={{ from }} to={castLink} replace>Cast</Link>
-              <Link className={css.reviewLink} state={{ from}} to={reviewLink} replace>Reviews</Link>
+              <Link className={css.castLink}    to="cast"   state={location.state}> Cast    </Link>
+              <Link className={css.reviewLink} to="reviews" state={location.state}> Reviews </Link>
             </div>
           </div>
         </div>
@@ -110,5 +103,5 @@ const reviewLink = isReviewDetails ? `/movies/${movieId}` : `/movies/${movieId}/
     </div>
   )
 } 
-  
+    <ButtonBack />
 */
