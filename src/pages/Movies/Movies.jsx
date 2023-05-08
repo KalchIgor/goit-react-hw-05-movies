@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { searchMovies } from '../../shared/Api/Api';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import noImg from "..//..//img/No-picture-available.png";
+import { useLocation, useNavigate } from 'react-router-dom';
+import MovieList from 'components/MovieList/MovieList';
 import css from "./Movies.module.css";
 
 export default function Movies() {
@@ -65,28 +65,7 @@ return (
             </button>
             </form>
         </header>
-        <ul className={css.list}>
-        {movies.length > 0 &&
-            movies.map(({ id, title, poster_path }) => (
-            
-                <li className={css.link} key={id} id={id}>
-                <Link
-                    to={{
-                    pathname: `/movies/${`${id}`}`,
-                    state: {
-                        from: {
-                        location,
-                        },
-                    },
-                    }}
-                >
-                    <img className={css.img} src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : noImg} alt="poster"/>
-                    <p className={css.filmName}>{title}</p>
-                </Link>
-                </li>
-            
-            ))}
-        </ul>
+        <MovieList movies={movies}></MovieList>
     </>
 );
 };

@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+
 import css from "./ButtonBack.module.css";
 
 export const ButtonBack=()=> {
@@ -6,8 +7,6 @@ export const ButtonBack=()=> {
     const backLink=location.state?.from ?? '/';
 
     return (<div>
-        <Link to={backLink} className={css.link} >Go back</Link>
+        <Link to={backLink} className={css.link} > Go back</Link>
            </div>)
-}
-
-;
+};

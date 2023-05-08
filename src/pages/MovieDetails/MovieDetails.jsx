@@ -4,7 +4,7 @@ import { getMovieDetails } from "shared/Api/Api";
 import { Loader } from "components/Loader/Loader";
 import css from "./MovieDetails.module.css";
 import noImg from "..//..//img/No-picture-available.png";
-import { ButtonBack }  from 'pages/ButtonBack/ButtonBack';
+import { ButtonBack } from 'pages/ButtonBack/ButtonBack';
 
 
 export default function MovieDetails() {
@@ -13,6 +13,7 @@ export default function MovieDetails() {
   const [error, setError] = useState(null);
 
   const location = useLocation();
+ 
   const { movieId } = useParams();
   
   useEffect(() => {
@@ -40,7 +41,7 @@ export default function MovieDetails() {
 
   return (
     <div className={css.container}>
-       <ButtonBack />
+      <ButtonBack />
       {loading && <Loader />}
       {error && <p>Something went wrong</p>}
       {movie && (
@@ -109,4 +110,5 @@ const reviewLink = isReviewDetails ? `/movies/${movieId}` : `/movies/${movieId}/
     </div>
   )
 } 
+  
 */
