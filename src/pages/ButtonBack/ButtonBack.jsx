@@ -6,7 +6,7 @@ export const ButtonBack=()=> {
     const backLink=location.state?.from ?? '/';
 
     return (<div>
-        <Link to={backLink} className={css.link} state={location.state?.from ?? "/"} >
+        <Link to={backLink} className={css.link}  >
          <span>Go back</span>
         </Link>
            </div>)
