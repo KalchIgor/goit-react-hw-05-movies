@@ -51,8 +51,8 @@ export default function MovieDetails() {
             <p>{`${movie.genres.map(genre => genre.name).join(' / ')}`}</p>
             <div className={css.boxAddInfo}>
               <h2>Additional information</h2>
-              <Link className={css.castLink}    to="cast"   state={location.state}> Cast    </Link>
-              <Link className={css.reviewLink} to="reviews" state={location.state}> Reviews </Link>
+              <Link className={css.castLink}    to="cast"   state={location.state?.from ?? "/"}> Cast    </Link>
+              <Link className={css.reviewLink} to="reviews" state={location.state?.from ?? "/"}> Reviews </Link>
             </div>
           </div>
         </div>
